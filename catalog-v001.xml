@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://dl.dropboxusercontent.com/u/39840858/ontologie/san" uri="file:/D:/PROJEKTI/Internet%20of%20Things/SourceCodeoviRelevantnihOntologija/PollitecnicaDelleMarche%20-%20Spallazzi%20et%20al/gilbertotcc-iot-ontology-ad5f176cdc31/src/owl/san.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1467790058850" name="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl" uri="ThingAsAServiceOntology.owl"/>
+    </group>
+</catalog>
