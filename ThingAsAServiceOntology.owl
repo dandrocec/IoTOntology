@@ -322,6 +322,14 @@ Operation that results in a change of the world&apos;s state  i.e. hasEffect obj
     
 
 
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols">
+        <rdfs:comment>Derived from http://www.postscapes.com/internet-of-things-protocols/</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Jitter -->
 
     <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Jitter">
