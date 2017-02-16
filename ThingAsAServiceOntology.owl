@@ -1,0 +1,1458 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#"
+     xml:base="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl">
+        <rdfs:comment>Thing as a service ontology defined in the project IP-2014-09-3877 supported by the Croatian Science Foundation.</rdfs:comment>
+        <owl:imports rdf:resource="https://dl.dropboxusercontent.com/u/39840858/ontologie/san"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#definesOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#definesOperation">
+        <rdfs:domain rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#API"/>
+        <rdfs:range rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasMappingFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasMappingFrom">
+        <rdfs:domain rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DataTypeMapper"/>
+        <rdfs:range rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasMappingTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasMappingTo">
+        <rdfs:domain rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DataTypeMapper"/>
+        <rdfs:range rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasServiceQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#hasServiceQuality">
+        <rdfs:range rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:domain rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#isRepresentedBy">
+        <rdfs:range rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WebThing"/>
+        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#usesPhysicalObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#usesPhysicalObject">
+        <rdfs:domain rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation"/>
+        <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Event"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AMQP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AMQP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>AMQP (Advanced Message Queuing Protocol)
+&quot;An open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing (including point-to-point and publish-and-subscribe), reliability and security.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ANT -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ANT">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>ANT
+ANT is a proprietary wireless sensor network technology featuring a wireless communications protocol stack that enables semiconductor radios operating in the 2.4 GHz Industrial, Scientific and Medical allocation of the RF spectrum (&quot;ISM band&quot;) to communicate by establishing standard rules for co-existence, data representation, signalling, authentication and error detection.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#API -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#API">
+        <rdfs:comment>It represents vendors’ Application Programming Interfaces (APIs).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AccessToOperatingSystemsThroughRemoveMedia -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AccessToOperatingSystemsThroughRemoveMedia">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PoorPhysicalSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ActuatorOperation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ActuatorOperation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation"/>
+        <rdfs:comment>BonSAI Ontology - http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl
+Operation that results in a change of the world&apos;s state  i.e. hasEffect object property has a value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Aeron -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Aeron">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>Efficient reliable UDP unicast, UDP multicast, and IPC message transport.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Age -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Age">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Animateness -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Animateness">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>non-animate vs. animate</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AvailabilityQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#AvailabilityQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#BehavioralIntention -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#BehavioralIntention">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Bluetooth -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Bluetooth">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>Bluetooth
+Bluetooth works in the 2.4 GHz ISM band and uses frequency hopping. With a data rate up to 3 Mbps and maximum range of 100m. Each application type which can use Bluetooth has its own profile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CCN -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CCN">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>Content-Centric Networking  -  Next-gen network architecture to solve challenges in content distribution scalability, mobility, and security.
+CCN directly routes and delivers named pieces of content at the packet level of the network, enabling automatic and application-neutral caching in memory wherever it’s located in the network. The result? Efficient and effective delivery of content wherever and whenever it is needed. Since the architecture enables these caching effects as an automatic side effect of packet delivery, memory can be used without building expensive application-level caching services</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Cellular -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Cellular">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>Cellular:
+GPRS/2G/3G/4G cellular</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CloudService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CloudService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CoAP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CoAP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>CoAP (Constrained Application Protocol)
+&quot;CoAP is an application layer protocol that is intended for use in resource-constrained internet devices, such as WSN nodes. CoAP is designed to easily translate to HTTP for simplified integration with the web, while also meeting specialized requirements such as multicast support, very low overhead, and simplicity. The CoRE group has proposed the following features for CoAP: RESTful protocol design minimizing the complexity of mapping with HTTP, Low header overhead and parsing complexity, URI and content-type support, Support for the discovery of resources provided by known CoAP services. Simple subscription for a resource, and resulting push notifications, Simple caching based on max-age.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CollectingTooMuchPersonalInformation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CollectingTooMuchPersonalInformation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CompensationForInformationProvision -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CompensationForInformationProvision">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ComplexServiceDataType -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ComplexServiceDataType">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ComplexThing -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ComplexThing">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject"/>
+        <rdfs:comment>Thing that consists of more sensors, actuators and their combination</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Complexity -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>dumb vs. smart</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ConnectivityPatterns -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ConnectivityPatterns">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>Sporadic vs. continuous communication, narrow vs. broadband</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DDS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DDS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>DDS (Data-Distribution Service for Real-Time Systems)
+&quot;The first open international middleware standard directly addressing publish-subscribe communications for real-time and embedded systems.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DTLS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DTLS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>(Datagram Transport Layer) - &quot;The DTLS protocol provides communications privacy for datagram protocols. The protocol allows client/server applications to communicate in a way that is designed to prevent eavesdropping, tampering, or message forgery. The DTLS protocol is based on the Transport Layer Security (TLS) protocol and provides equivalent security guarantees.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DataTypeMapper -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DataTypeMapper">
+        <rdfs:comment>Its instances are used for data type mappings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DefaultUsernamesAndPasswords -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DefaultUsernamesAndPasswords">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureWebInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Delay -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Delay">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DeviceUpdatesNotSigned -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DeviceUpdatesNotSigned">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureSoftwareFirmware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DeviceUpdatesTransmittedWithoutEncryption -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DeviceUpdatesTransmittedWithoutEncryption">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureSoftwareFirmware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DigiMesh -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#DigiMesh">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>DigiMesh
+&quot;DigiMesh is a proprietary peer-to-peer networking topology for use in wireless end-point connectivity solutions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Dispersion -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Dispersion">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>Concentrated vs. dispersed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EC-GSM-IoT -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EC-GSM-IoT">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>EC-GSM-IoT (Extended Coverage-GSM-IoT) - Enables new capabilities of existing cellular networks for LPWA (Low Power Wide Area) IoT applications. EC-GSM-IoT can be activated through new software deployed over a very large GSM footprint, adding even more coverage to serve IoT devices.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Eddystone -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Eddystone">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>Eddystone - A protocol specification that defines a Bluetooth low energy (BLE) message format for proximity beacon messages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EffortExpectancy -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EffortExpectancy">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EnOcean -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EnOcean">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>EnOcean
+EnOcean is a an energy harvesting wireless technology which works in the frequencies of 868 MHz for europe and 315 MHz for North America. The transmit range goes up to 30 meter in buildings and up to 300 meter outdoor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EncryptionOptionsAreNotAvailable -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EncryptionOptionsAreNotAvailable">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientSecurityConfigurability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EndUserIsNotGivenAChoiceToAllowCollectionOfCertainTypesOfData -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#EndUserIsNotGivenAChoiceToAllowCollectionOfCertainTypesOfData">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Ethernet -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Ethernet">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Experience -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Experience">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#FacilitatingConditions -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#FacilitatingConditions">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Gender -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#HyperCat -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#HyperCat">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols"/>
+        <rdfs:comment>HyperCat - An open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IEEE_802.15.4 -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IEEE_802.15.4">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>IEEE 802.15.4 is a standard which specifies the physical layer and media access control for low-rate wireless personal area networks (LR-WPANs). It is maintained by the IEEE 802.15 working group. It is the basis for the ZigBee,ISA100.11a, WirelessHART, and MiWi specifications, each of which further extends the standard by developing the upper layers which are not defined in IEEE 802.15.4. Alternatively, it can be used with 6LoWPAN and standard Internet protocols to build a wireless embedded Internet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IPv6 -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IPv6">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>IPv6, is an Internet Layer protocol for packet-switched internetworking and provides end-to-end datagram transmission across multiple IP networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ISA100.11a -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ISA100.11a">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>ISA100.11a
+&quot;ISA100.11a is a wireless networking technology standard developed by the International Society of Automation (ISA). The official description is &quot;Wireless Systems for Industrial Automation: Process Control and Related Application&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IaaSService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IaaSService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CloudService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ImproperAccess -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ImproperAccess">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InabilityToLimitAdministrativeCapabilities -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InabilityToLimitAdministrativeCapabilities">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PoorPhysicalSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationCongruency -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationCongruency">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationSensitivity -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationSensitivity">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationType -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationType">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationUsage -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InformationUsage">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureCloudInterface -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureCloudInterface">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+        <rdfs:comment>covers cloud APIs or cloud-based web interfaces</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureMobileInterface -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureMobileInterface">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureNetworkServices -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureNetworkServices">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecurePasswordRecovery -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecurePasswordRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientAuthenticationOrAuthorization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureSoftwareFirmware -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureSoftwareFirmware">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureWebInterface -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureWebInterface">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientAuthenticationOrAuthorization -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientAuthenticationOrAuthorization">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientSecurityConfigurability -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientSecurityConfigurability">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols">
+        <rdfs:comment>Derived from http://www.postscapes.com/internet-of-things-protocols/</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems">
+        <rdfs:comment>derived from OWAPS IoT - https://www.owasp.org/index.php/IoT_Security_Guidance
+https://www.owasp.org/images/8/8e/Infographic-v1.jpg</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#JMS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#JMS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>JMS (Java Message Service) - A Java Message Oriented Middleware (MOM) API for sending messages between two or more clients.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Jitter -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Jitter">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LLAP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LLAP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>LLAP (lightweight local automation protocol)
+&quot;LLAP is a simple short message that is sent between inteligent objects using normal text, it&apos;s not like TCP/IP, bluetooth, zigbee, 6lowpan, WiFi etc which achieve at a low level &quot;how&quot; to move data around. This means LLAP can run over any communication medium. The three strengths of LLAP are, it&apos;ll run on anything now, anything in the future and it&apos;s easily understandable by humans.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LTE-MTC -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LTE-MTC">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>LTE-MTC (LTE-Machine Type Communication) - Standards-based family of technologies supports several technology categories, such as Cat-1 and CatM1, suitable for the IoT.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LWM2M -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LWM2M">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>LWM2M (Lightweight M2M)
+&quot;Lightweight M2M (LWM2M) is a system standard in the Open Mobile Alliance. It includes DTLS, CoAP, Block, Observe, SenML and Resource Directory and weaves them into a device-server interface along with an Object structure.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LackOfTransportEncryption -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LackOfTransportEncryption">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LoRaWAN -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LoRaWAN">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>LoRaWAN - Network protocol intended for wireless battery operated Things in regional, national or global network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#MQTT -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#MQTT">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>MQTT (Message Queuing Telemetry Transport)
+&quot;The MQTT protocol enables a publish/subscribe messaging model in an extremely lightweight way. It is useful for connections with remote locations where a small code footprint is required and/or network bandwidth is at a premium.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#MQTT-SN -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#MQTT-SN">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>MQTT-SN (MQTT For Sensor Networks) - An open and lightweight publish/subscribe protocol designed specifically for machine-to-machine and mobile applications</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Mobility -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Mobility">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>Moveable vs. fixed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NB-IoT -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NB-IoT">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>NB-IoT (Narrow-Band IoT) A technology being standardized by the 3GPP standards body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NFC -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NFC">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>NFC
+Based on the standard ISO/IEC 18092:2004, using inductive coupled devices at a center frequency of13.56 MHz. The data rate is up to 424 kbps and the rangeis with a few meters short compared to the wireless sensornetworks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NanoIP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NanoIP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>NanoIP, which stands for the nano Internet Protocol, is a concept that was created to bring Internet-like networking services to embedded and sensor devices, without the overhead of TCP/IP. NanoIP was designed with minimal overheads, wireless networking, and local addressing in mind</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkSevicesVulnerableToDenailOfService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkSevicesVulnerableToDenailOfService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureNetworkServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoAccountLockout -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoAccountLockout">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureWebInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoOptionToEnableSecurityLogging -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoOptionToEnableSecurityLogging">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientSecurityConfigurability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoTwoFactorAuthentication -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NoTwoFactorAuthentication">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientAuthenticationOrAuthorization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NotAvailableOrNotProperlyConfigureedSSL_TLS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NotAvailableOrNotProperlyConfigureedSSL_TLS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LackOfTransportEncryption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NotProperlyProtectionOfCollectedInformation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NotProperlyProtectionOfCollectedInformation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyConcerns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation"/>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PaaSService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PaaSService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CloudService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PacketLossRate -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PacketLossRate">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PasswordSecurityOptionsAreNotAvailable -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PasswordSecurityOptionsAreNotAvailable">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientSecurityConfigurability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedBenevolence -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedBenevolence">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedCredibility -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedCredibility">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedIntegrity -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedIntegrity">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedRisk -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerceivedRisk">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerformanceExpectancy -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PerformanceExpectancy">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PhysicalWeb -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PhysicalWeb">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols"/>
+        <rdfs:comment>Physical Web - The Physical Web enables you to see a list of URLs being broadcast by objects in the environment around you with a Bluetooth Low Energy (BLE) beacon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Placement -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Placement">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>Attached vs. embedded</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PoorPhysicalSecurity -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PoorPhysicalSecurity">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PortsExposedToTheIntenerViaUPnP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PortsExposedToTheIntenerViaUPnP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureNetworkServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PowerSupply -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PowerSupply">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>Externally powered vs. autonomous</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyAttitude -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyAttitude">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyConcerns -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyConcerns">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IotSecurityProblems"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PrivacyQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QUIC -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QUIC">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>(Quick UDP Internet Connections, pronounced quick) supports a set of multiplexed connections between two endpoints over User Datagram Protocol (UDP), and was designed to provide security protection equivalent to TLS/SSL, along with reduced connection and transport latency, and bandwidth estimation in each direction to avoid congestion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RESTService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RESTService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ROLL -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ROLL">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>ROLL / RPL (IPv6 routing for low power/lossy networks)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RPMA -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RPMA">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>RPMA (Random phase multiple access) A technology communication system employing direct-sequence spread spectrum (DSSS) with multiple access.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Reactive_Streams -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Reactive_Streams">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>Reactive Streams
+&quot;A standard for asynchronous stream processing with non-blocking back pressure on the JVM.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ReliabilityQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ReliabilityQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RobustnessQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#RobustnessQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SOAPService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SOAPService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SSI -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SSI">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>SSI (Simple Sensor Interface)
+&quot;a simple communications protocol designed for data transfer between computers or user terminals and smart sensors&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#STOMP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#STOMP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>The Simple Text Oriented Messaging Protocol</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SaaSService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SaaSService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#CloudService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SecurityQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SecurityQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SemanticWebThing -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SemanticWebThing">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WebThing"/>
+        <rdfs:comment>It additionaly supports semantic annotations using this (open IoT) ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SensitiveInformationPassedInClearText -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SensitiveInformationPassedInClearText">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LackOfTransportEncryption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SensoryOperation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SensoryOperation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Operation"/>
+        <rdfs:comment>BonSAI Ontology - http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl
+
+Operation that returns a parameter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType"/>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceProviderReputation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceProviderReputation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceQuality -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceQuality">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SimpleServiceDataType -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SimpleServiceDataType">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServiceDataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Size -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Size">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic"/>
+        <rdfs:comment>From tiny microchips to vessels</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SocialInfluence -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#SocialInfluence">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#TSMP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#TSMP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>Time Synchronized Mesh Protocol (TSMP)
+A communications protocol for self-organizing networks of wireless devices called motes. TSMP devices stay synchronized to each other and communicate in timeslots, similar to other TDM (time-division multiplexing) systems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingAsAService -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingAsAService">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ThingCharacteristic">
+        <rdfs:comment>http://internetofthings.fi/extras/IoTSOTAReport2013.pdf - Table 5. Taxonomies for the things in IoT</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Throughput -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Throughput">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#NetworkQualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#TimelinessQoS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#TimelinessQoS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#QualityOfService"/>
+        <rdfs:comment>Source: Surrey ontology : http://personal.ee.surrey.ac.uk/Personal/Wei.Wang/ontologies/IoT.est.owl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UDP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UDP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>User Datagram Protocol - A simple OSI transport layer protocol for client/server network applications based on Internet Protocol (IP). UDP is the main alternative to TCP and one of the oldest network protocols in existence, introduced in 1980. UDP is often used in applications specially tuned for real-time performance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UPnP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UPnP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols"/>
+        <rdfs:comment>UPnP (Universal Plug and Play) - Now managed by the Open Connectivity Foundation is a set of networking protocols that permits networked devices to seamlessly discover each other&apos;s presence on the network and establish functional network services for data sharing, communications, and entertainment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnauthorizedSecondaryUse -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnauthorizedSecondaryUse">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnnecessaryExternalPortsLikeUSBPorts -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnnecessaryExternalPortsLikeUSBPorts">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#PoorPhysicalSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnnecessaryPortsAreOpen -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UnnecessaryPortsAreOpen">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureNetworkServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UpdateServersAreNotSecured -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UpdateServersAreNotSecured">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureSoftwareFirmware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UseBehavior -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UseBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UseOfProprietaryEncryptionProtocols -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UseOfProprietaryEncryptionProtocols">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#LackOfTransportEncryption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UserEducation -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#UserEducation">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ServicePrivacyFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#VoluntarinessOfUse -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#VoluntarinessOfUse">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTAcceptanceFactors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WeakPasswords -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WeakPasswords">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsufficientAuthenticationOrAuthorization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WebThing -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WebThing">
+        <rdfs:comment>http://model.webofthings.io/#web-things-model - A Web Thing (or simply Thing) is a digital representation of a physical object accessible via a RESTful Web API. Examples of Web Things are: an Arduino board, a garage door, a bottle of soda, a building, a TV, etc. The API of the Web Thing can be hosted on the Thing itself or on an intermediate host in the network such as a Gateway or a Cloud service (for Things that aren&apos;t accessible through the Internet).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Weightless -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Weightless">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>Weightless
+Weightless is a proposed proprietary open wireless technology standard for exchanging data between a base station and thousands of machines around it (using wavelength radio transmissions in unoccupied TV transmission channels) with high levels of security.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WiFi -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WiFi">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WiMax -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WiMax">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>WiMax
+WiMax is based on the standard IEEE 802.16 and is intended for wireless metropolitan area networks. The range is different for fixed stations, where it can go up to 50 km and mobile devices with 5 to 15 km. WiMAx operates at frequencies between 2.5 GHz to 5.8 GHz with a transferrate of 40 Mbps.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WirelessHart -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#WirelessHart">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>WirelessHart
+&quot;WirelessHART technology provides a robust wireless protocol for the full range of process measurement, control, and asset management applications.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XMPP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XMPP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>XMPP (Extensible Messaging and Presence Protocol)
+&quot;An open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware, content syndication, and generalized routing of XML data.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XMPP-IoT -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XMPP-IoT">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>XMPP-IoT
+&quot;In the same manor as XMPP silently has created people to people communication interoperable. We are aiming to make communication machine to people and machine to machine interoperable.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XSS_CSRF_SQLi_Vulnerabilities -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#XSS_CSRF_SQLi_Vulnerabilities">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#InsecureWebInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ZigBee -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#ZigBee">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTTransportProtocols"/>
+        <rdfs:comment>The ZigBee protocol uses the 802.15.4 standard and operates in the 2.4 GHz frequency range with 250 kbps. The maximum number of nodes in the network is 1024 with a range up to 200 meter. ZigBee can use 128 bit AES encryption.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#mDNS -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#mDNS">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDiscoveryProtocols"/>
+        <rdfs:comment>mDNS (multicast Domain Name System) - Resolves host names to IP addresses within small networks that do not include a local name server.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#uIP -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#uIP">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>The uIP is an open source TCP/IP stack capable of being used with tiny 8- and 16-bit microcontrollers. It was initially developed by Adam Dunkels of the &quot;Networked Embedded Systems&quot; group at the Swedish Institute of Computer Science, licensed under a BSD style license, and further developed by a wide group of developers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#6LoWPAN -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#6LoWPAN">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTInfrastructureProtocols"/>
+        <rdfs:comment>6LoWPAN is an acronym of IPv6 over Low power Wireless Personal Area Networks. It is an adaption layer for IPv6 over IEEE802.15.4 links. This protocol operates only in the 2.4 GHz frequency range with 250 kbps transfer rate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Mihini/M3DA -->
+
+    <owl:Class rdf:about="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#Mihini/M3DA">
+        <rdfs:subClassOf rdf:resource="http://www.foi.unizg.hr/ontologies/ThingAsAServiceOntology.owl#IoTDataProtocols"/>
+        <rdfs:comment>Mihini/M3DA
+&quot;The Mihini agent is a software component that acts as a mediator between an M2M server and the applications running on an embedded gateway. M3DA is a protocol optimized for the transport of binary M2M data. It is made available in the Mihini project both for means of Device Management, by easing the manipulation and synchronization of a device&apos;s data model, and for means of Asset Management, by allowing user applications to exchange typed data/commands back and forth with an M2M server, in a way that optimizes the use of bandwidth&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Event"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
